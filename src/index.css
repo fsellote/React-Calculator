@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(/src/assets/bg.jpg) 
+  }
+  .container {
+    @apply flex flex-row justify-center space-x-16 mx-4 w-full max-w-screen-lg mt-36;
+  }
+  .calculator {
+    @apply bg-[#f6c6c0] w-96 p-5 rounded-lg shadow-lg mb-12;
+  }
+  input {
+    @apply w-full text-right py-1 px-5 text-2xl bg-transparent text-white;
+  }
+  .buttons {
+    @apply grid grid-cols-4 gap-y-4 gap-x-3 mt-5;
+  }
+  button {
+    @apply transition duration-200 active:-translate-y-1 text-xl;
+  }
+  .number {
+    @apply bg-gray-200 text-gray-600 rounded-lg p-3;
+  }
+  .operator {
+    @apply bg-[#959090] text-white rounded-lg p-2;
+  }
+}
